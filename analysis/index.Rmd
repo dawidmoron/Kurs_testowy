@@ -8,4 +8,8 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+Welcome to my research website???
+
+Poniżej znajdują się podstawowe wizualizacje:
+
++[wizualizacje](wizualizacje.html)

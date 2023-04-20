@@ -1,0 +1,64 @@
+---
+title: "Zajęcia z R"
+subtitle: Wprowadzenie do R
+author: "Joanna Zyprych-Walczak"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(comment = '>')
+```
+
+**Pierwsze uruchomienie - ćwiczenia**
+
+1. Zainstaluj pakiet ‘aplpack’, dowiedz się czegoś o funkcji ‘faces’ i narysuj bazując na tych informacjach zestaw twarzy z tematyką świąt Bożego Narodzenia.
+2. Znajdź, jakie funkcje istnieją w R, które powiązane są ze słowem kluczowym ‘ test’
+3. Zainstaluj pakiet 'effects'. Sprawdź czego dotyczą dane TitanicSurvival.
+
+**Pierwsze uruchomienie - odpowiedzi**
+
+```{r, tidy=T, comment = '>'}
+
+set.seed(123)
+# zadanie 1
+library('aplpack')
+help(faces)
+faces(1,1,face.type=2)
+
+# zadanie 2
+apropos('test')
+
+# zadanie 3
+library('effects')
+data(TitanicSurvival)
+help(TitanicSurvival)
+```
+
+  
+
+**Macierze - ćwiczenia:**
+
+1. Zadeklaruj poniższe macierze:
+\[A =
+ \begin{pmatrix}
+1 &  2 & -1&  0 \\ 
+3 & -2 & 4 & 5 \\
+2 & 6 & 5 & -3 \\
+0 & 1&  5&  -4 \\
+ \end{pmatrix}
+\]
+\[
+B =
+ \begin{pmatrix}
+3 & 6 \\
+4 & 0 \\ 
+2 & -1 \\ 
+1 & 1 \\ 
+ \end{pmatrix}
+\]
+  Oblicz wyznacznik macierzy $\textbf{A}$, znajdź iloczyn $\textbf{AB}$, znajdź macierz transponowaną $\mathbf{B}^T$.
+

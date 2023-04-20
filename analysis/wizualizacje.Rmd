@@ -1,0 +1,45 @@
+---
+title: "Zajęcia z R :-)"
+subtitle: Wizualizacje
+author: "Joanna Zyprych-Walczak"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(comment = '>')
+```
+
+**Wprowadzenie do ggplot2 - zadania**
+
+1. Uruchom polecenie \texttt{ggplot(data = crabs)}. Co widzisz?
+2. Wykonaj wykres punktowy zależności między zmiennymi \texttt{CL} i \texttt{FL.}
+3. Co zobaczysz na wykresie punktowym zależności między zmiennymi \texttt{sex} i \texttt{sp}? Dlaczego ten wykres jest bezużyteczny?
+4. Na podstawie danych \texttt{birthwt} z pakietu \texttt{MASS} utwórz wykres punktowy opisujący zależność pomiędzy wagą urodzeniową dziecka, a ilością wizyt u lekarza w pierwszym trymestrze. Co możesz powiedzieć o tej zależności?
+
+**Wprowadzenie do ggplot2 - odpowiedzi**
+
+```{r, tidy = T}
+# zadanie 1
+set.seed(123)
+library(ggplot2)
+library(MASS)
+data(crabs)
+ggplot(data = crabs)
+
+# zadanie 2
+ggplot(data = crabs) + geom_point(aes(CL, FL))
+
+# zadanie 3
+ggplot(data = crabs) + geom_point(aes(sex, sp))
+
+# zadanie 4
+data(birthwt)
+ggplot(data = birthwt) + geom_point(aes(lwt, bwt))
+
+
+
+```
